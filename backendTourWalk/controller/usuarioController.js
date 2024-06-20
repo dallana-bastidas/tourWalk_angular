@@ -56,7 +56,7 @@ exports.loginUsuario = async(req, res) => {
     const usuario = await usuarioModel.findOne({ email });
 
     if (!usuario) {
-      return res.status(400).json({ error: 'Usuario no encontrado' });
+      return res.status(403).json({ error: 'Usuario no encontrado' });
     }
 
     if (password !== usuario.password) {
