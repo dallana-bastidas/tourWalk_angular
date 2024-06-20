@@ -47,7 +47,7 @@ exports.actualizarDestino= async(req, res) => {
         res.status(500).send("No se pudo actualizar el destino");
     }
 }
-
+ 
 // Eliminar un destino
 exports.eliminarDestino = async (req, res) => {
     const { destinoId } = req.params;
