@@ -23,20 +23,30 @@ exports.obtenerDestinos = async (req, res) => {
 
 
 // Actualizar un destino existente
-exports.actualizarDestino = async (req, res) => {
-    const { destinoId } = req.params;
-    const { nombre, descripcion, precio, fechasDisponibles } = req.body;
+exports.actualizarDestino= async(req, res) => {
     try {
-        const destinoActualizado = await Destino.findByIdAndUpdate(
-            destinoId,
-            { nombre, descripcion, precio, fechasDisponibles },
-            { new: true }
-        );
-        res.status(200).json(destinoActualizado);
+        const {nombre, descripcion, precio, imagenes, fechasDisponibles } = req.body;
+        let destino = await destinoModel.findById(req.params.id)
+
+        if (!destino) {
+            res.status(404).send({ mensaje: "No se encontró la pelicula" })
+            return
+        }
+
+        destino.nombre = nombre;
+        destino.descripcion = descripcion;
+        destino.precio = precio;
+        destino.imagenes = imagenes;
+        destino.fechasDisponibles = fechasDisponibles;
+
+        await destinoModel.findByIdAndUpdate(req.params.id, destino);
+        res.status(200).send({ mensaje: "Destino actualizado", destino })
+
     } catch (error) {
-        res.status(500).json({ mensaje: 'Error al actualizar el destino', error });
+        console.log(error);
+        res.status(500).send("No se pudo actualizar el destino");
     }
-};
+}
 
 // Eliminar un destino
 exports.eliminarDestino = async (req, res) => {

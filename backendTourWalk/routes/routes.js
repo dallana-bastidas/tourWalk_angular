@@ -9,7 +9,7 @@ router.post('/login-usuario', usuarioController.loginUsuario);
 
 router.post('/crear-destino', destinoController.crearDestino);
 router.get('/listar-destino', destinoController.obtenerDestinos);
-router.put('/actualizar-destino', destinoController.actualizarDestino);
+router.put('/actualizar-destino/:id', destinoController.actualizarDestino);
 router.delete('/eliminar-destino', destinoController.eliminarDestino);
 
 

@@ -13,6 +13,10 @@ const DestinoSchema = mongoose.Schema({
         type: Number,
         required: true
     },
+    imagenes:{
+        type: [],
+        require:true //multter
+    },
     fechasDisponibles: [{
         type: Date,
         required: true
