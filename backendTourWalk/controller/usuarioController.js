@@ -9,6 +9,46 @@ exports.registrarUsuario = async(req, res) =>{
     res.status(400).json({ error: error.message });
   }
 };
+
+
+
+exports.consultarUsuarios = async (req,res) =>{
+  try {
+    const usuarios = await usuarioModel.find();
+    res.status(201).send(usuarios);
+  }catch (error){
+    console.log(error);
+    res.status(400).send('Hubo un problema al consultar el usuario');
+  }
+};
+
+exports.actualizarUsuario= async(req,res)=>{
+  try{
+    const{nombre,apellido,email,password} =req.body;
+    let usuarioData = await usuarioModel.findById(req.params.id)
+
+    if(!usuarioData){
+      res.status(201).send({mensaje:"No se encontro el usuario"})
+      return
+    }
+
+    usuarioData.nombre = nombre;
+    usuarioData.apellido = apellido;
+    usuarioData.email = email;
+    usuarioData.password = password;
+
+    await usuarioModel.findByIdAndUpdate(req.params.id,usuarioData);
+    res.status(201).send({mensaje:"Usuario actualizado",usuarioData})
+
+  }catch(error){
+    console.log(error);
+    res.status(500).send("Hubo un error al actualizar el usuario");
+  }
+}
+
+
+
+
 exports.loginUsuario = async(req, res) => {
   const { email, password } = req.body;
 
