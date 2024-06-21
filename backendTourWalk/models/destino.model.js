@@ -17,10 +17,10 @@ const DestinoSchema = mongoose.Schema({
         type: [],
         require:true //multter
     },
-    fechasDisponibles: [{
-        type: Date,
+    fechasDisponibles: {
+        type: String,
         required: true
-    }],
+    },
 });
 
 module.exports = mongoose.model('Destino', DestinoSchema);
