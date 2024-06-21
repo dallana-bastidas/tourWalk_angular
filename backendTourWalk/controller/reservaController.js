@@ -16,3 +16,20 @@ exports.crearReserva = async(req, res)=>{
         res.status(400).json({ error: error.message });
     }
 }
+
+
+
+exports.eliminarReserva = async (req, res) => {
+    try {
+        const reservaId = req.params.id; 
+        const reservaEliminada = await reservaModel.findByIdAndDelete(reservaId);
+
+        if (!reservaEliminada) {
+            return res.status(404).json({ mensaje: 'Reserva no encontrada' });
+        }
+
+        res.status(200).json({ mensaje: 'Reserva eliminada exitosamente', reserva: reservaEliminada });
+    } catch (error) {
+        res.status(400).json({ error: error.mensaje });
+    }
+}

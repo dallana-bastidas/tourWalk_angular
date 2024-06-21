@@ -21,6 +21,16 @@ exports.consultarUsuarios = async (req,res) =>{
   }
 };
 
+exports.consultarUsuario = async (req,res) =>{
+  try {
+    const usuario = await usuarioModel.find();
+    res.status(201).send(usuario);
+  }catch (error){
+    console.log(error);
+    res.status(400).send('Hubo un problema al consultar el usuario');
+  }
+};
+
 exports.actualizarUsuario= async(req,res)=>{
   try{
     const{nombre,apellido,email,password} =req.body;
