@@ -1,3 +1,4 @@
+//cSpell:disable
 const mongoose = require('mongoose');
 
 const ReservaSchema = mongoose.Schema({

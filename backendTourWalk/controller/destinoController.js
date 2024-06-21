@@ -1,3 +1,4 @@
+//cSpell:disable
 const destinoModel = require('../models/destino.model');
 
 // Crear un nuevo destino

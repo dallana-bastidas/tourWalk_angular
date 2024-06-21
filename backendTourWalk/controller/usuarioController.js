@@ -1,3 +1,4 @@
+//cSpell:disable
 const usuarioModel = require('../models/usuario.model');
 
 exports.registrarUsuario = async(req, res) =>{

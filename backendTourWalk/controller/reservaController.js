@@ -1,3 +1,4 @@
+//cSpell:disable
 const reservaModel = require('../models/reserva.model');
 const destinoModel = require('../models/destino.model')
 
