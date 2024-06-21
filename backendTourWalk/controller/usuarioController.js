@@ -22,6 +22,7 @@ exports.consultarUsuarios = async (req,res) =>{
   }
 };
 
+
 exports.actualizarUsuario= async(req,res)=>{
   try{
     const{nombre,apellido,email,password} =req.body;
@@ -42,11 +43,27 @@ exports.actualizarUsuario= async(req,res)=>{
 
   }catch(error){
     console.log(error);
-    res.status(500).send("Hubo un error al actualizar el usuario");
+    res.status(400).send("Hubo un error al actualizar el usuario");
   }
 }
 
+exports.eliminarUsuario = async(req,res)=>{
+  try{
+    let usuarioData = await usuarioModel.findById(req.params.id)
+    console.log ('usuarioData:',usuarioData)
+    if (!usuarioData){
+      res.status(201).send({mensaje:"No se encontró Usuario"})
+      return
+    }else{
+      await usuarioModel.findByIdAndDelete (req.params.id);
+      res.status(400).send({mensaje:"película eliminada"})
+    }
+  } catch (error){
+    console.log(error);
+    res.status(500).send("Hubo un problema al eliminar a el usuario")
+  }
 
+}
 
 
 exports.loginUsuario = async(req, res) => {
