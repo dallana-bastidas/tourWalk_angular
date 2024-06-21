@@ -1,3 +1,4 @@
+//cSpell:disable
 const usuarioModel = require('../models/usuario.model');
 
 exports.registrarUsuario = async(req, res) =>{
@@ -9,8 +10,6 @@ exports.registrarUsuario = async(req, res) =>{
     res.status(400).json({ error: error.message });
   }
 };
-
-
 
 exports.consultarUsuarios = async (req,res) =>{
   try {
@@ -65,6 +64,22 @@ exports.eliminarUsuario = async(req,res)=>{
 
 }
 
+exports.eliminarUsuario = async(req,res)=>{
+  try{
+    let usuarioData = await usuarioModel.findById(req.params.id)
+    console.log ('usuarioData:',usuarioData)
+    if (!usuarioData){
+      res.status(201).send({mensaje:"No se encontró Usuario"})
+      return
+    }else{
+      await usuarioModel.findByIdAndDelete (req.params.id);
+      res.status(400).send({mensaje:"película eliminada"})
+    }
+  } catch (error){
+    console.log(error);
+    res.status(500).send("Hubo un problema al eliminar a el usuario")
+  }
+};
 
 exports.loginUsuario = async(req, res) => {
   const { email, password } = req.body;
