@@ -9,7 +9,7 @@ const ReservaSchema = mongoose.Schema({
         type: String,
         require: true
     },
-    cantidadPersomas:{
+    cantidadPersonas:{
         type: Number,
         require: true
     },
