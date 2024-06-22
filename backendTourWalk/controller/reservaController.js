@@ -25,7 +25,9 @@ exports.consultarReserva = async (req, res) => {
     if (!idUsuario){
         return res.status(400).json({message: "Usuario no encontrado"})
     }
-    let reservaData  = await reservaModel.findById(req.body.idUsuario)
+    let reservaData = await reservaModel.find({
+      idUsuario: req.body.idUsuario,
+    });
     if  (!reservaData){
         res.status(400).json({message:"no se encontro reserva"})
     }else{

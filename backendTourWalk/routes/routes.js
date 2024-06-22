@@ -19,5 +19,6 @@ router.put('/actualizar-destino/:id', destinoController.actualizarDestino);
 router.delete('/eliminar-destino', destinoController.eliminarDestino);
 
 router.post('/crear-reserva', reservaController.crearReserva);
+router.get("/consultar-reserva", consultarReserva.consultarReserva);
 
 module.exports= router;
