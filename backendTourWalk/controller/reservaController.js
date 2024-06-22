@@ -1,6 +1,7 @@
 //cSpell:disable
-const reservaModel = require('../models/reserva.model');
-const destinoModel = require('../models/destino.model')
+const reservaModel = require("../models/reserva.model");
+const destinoModel = require("../models/destino.model");
+const { Query } = require("mongoose");
 
 exports.crearReserva = async(req, res)=>{
     try {
@@ -14,22 +15,5 @@ exports.crearReserva = async(req, res)=>{
 
     } catch (error) {
         res.status(400).json({ error: error.message });
-    }
-}
-
-
-
-exports.eliminarReserva = async (req, res) => {
-    try {
-        const reservaId = req.params.id; 
-        const reservaEliminada = await reservaModel.findByIdAndDelete(reservaId);
-
-        if (!reservaEliminada) {
-            return res.status(404).json({ mensaje: 'Reserva no encontrada' });
-        }
-
-        res.status(200).json({ mensaje: 'Reserva eliminada exitosamente', reserva: reservaEliminada });
-    } catch (error) {
-        res.status(400).json({ error: error.mensaje });
     }
 }
