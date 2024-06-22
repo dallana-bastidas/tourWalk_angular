@@ -12,12 +12,14 @@ router.get('/consultar-usuario/:id', usuarioController.consultarUsuario)
 router.put('/actualizar-usuario', usuarioController.actualizarUsuario);
 router.delete('/eliminar-usuario', usuarioController.eliminarUsuario);
 
-
-
 router.post('/crear-destino', destinoController.crearDestino);
 router.get('/listar-destinos', destinoController.obtenerDestinos);
 router.put('/actualizar-destino/:id', destinoController.actualizarDestino);
 router.delete('/eliminar-destino', destinoController.eliminarDestino);
+
 router.post('/crear-reserva', reservaController.crearReserva);
+router.get('/consultar-reserva', reservaController.consultarReserva);
+router.delete('/eliminar-reserva/:id', reservaController.eliminarReserva);
+
 
 module.exports= router;
