@@ -21,5 +21,4 @@ router.post('/crear-reserva', reservaController.crearReserva);
 router.get('/consultar-reserva', reservaController.consultarReserva);
 router.delete('/eliminar-reserva/:id', reservaController.eliminarReserva);
 
-
 module.exports= router;
