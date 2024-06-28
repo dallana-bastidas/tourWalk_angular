@@ -1,106 +1,46 @@
-<div class="container-fluid d-flex justify-content-around navbar">
-
-    <div>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinos</a>
-
-                <ul class="dropdown-menu">
-                    <li>
-                        <a class="dropdown-item" routerLink="/destinos">Pacifico</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="#">Nariño</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Valle del Cauca</a>
-                            </li>
-                            <li><a class="dropdown-item" href="#">Choco</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Atlantico</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="#">Bolivar</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Magdalena</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Atlantico</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Amazonia</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="#">Amazonas</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Caqueta</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Putumayo</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Andina</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="#">Antioquia</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Boyaca</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Cundinamarca</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <div>
-        <a href="/assets/secciones/planifica.html" class="nav-link bot">Planifica tu viaje</a>
-    </div>
-
-    <div>
-        <a routerLink="/">
-            <img src="../assets/icons/TOURWALK2.png" class="icon" alt="" />
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+        <a class="navbar-brand d-lg-none" routerLink="/">
+            <img src="/assets/icons/TOURWALK2.png" class="icon" alt="Logo" />
         </a>
-    </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex
+            justify-content-around w-100">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Destinos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Pacifico</a></li>
+                        <li><a class="dropdown-item" href="#">Atlantico</a></li>
+                        <li><a class="dropdown-item" href="#">Amazonia</a></li>
+                        <li><a class="dropdown-item" href="#">Andina</a></li>
+                    </ul>
+                </li>
 
-    <div>
-        <a href="/assets/secciones/descuentos.html" class="nav-link bot">Descuentos</a>
-    </div>
+                <li class="nav-item">
+                    <a href="/assets/secciones/planifica.html" class="nav-link bot">Planifica tu viaje</a>
+                </li>
+                <li class="nav-item d-none d-lg-block">
+                    <img src="/assets/icons/TOURWALK2.png" class="icon" alt="Logo" />
+                </li>
 
-    <div>
-        <a href="/assets/secciones/guias.html" class="nav-link bot">Guias</a>
-    </div>
+                <li class="nav-item">
+                    <a href="/assets/secciones/descuentos.html" class="nav-link bot">Descuentos</a>
+                </li>
 
-    <div class="d-flex justify-content-center align-items-center profile">
-        <div class="social-links logo-red">
-            <img src="../assets/icons/facebook1.png" alt="" />
-            <img src="../assets/icons/instagram1.png" alt="" />
+                <li>
+                    <div class="social-links logo-red">
+                        <img src="../assets/icons/facebook1.png" alt="Facebook" />
+                        <img src="../assets/icons/instagram1.png" alt="Instagram" />
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div class="btn">
-            <img src="../assets/icons/buscar1.png" alt="" class="buscar" />
-        </div>
     </div>
-</div>
-
-                <!-- <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-</div> -->
+</nav>
