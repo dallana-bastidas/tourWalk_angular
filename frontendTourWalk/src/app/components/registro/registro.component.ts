@@ -22,8 +22,8 @@ export class RegistroComponent {
         private _apiServicio: ApiService
     ) {
         this.formRegistro = this.fb.group({
-            nombres: ['', Validators.required],
-            apellidos: ['', Validators.required],
+            nombre: ['', Validators.required],
+            apellido: ['', Validators.required],
             email: ['', [Validators.required, Validators.pattern(this.regexEmail)]],
             password: ['', [Validators.required, Validators.minLength(6)]],
             confirmarPassword: ['', Validators.required]
