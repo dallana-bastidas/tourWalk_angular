@@ -6,7 +6,7 @@ const ContactoSchema = mongoose.Schema({
     type: String,
     require: true,
   },
-  
+
   correoElectronico: {
     type: String,
     require: true,
@@ -17,13 +17,15 @@ const ContactoSchema = mongoose.Schema({
     require: true,
   },
 
-  telefono:{
+  telefono: {
     type: String,
-    require:true,
+    require: true,
   },
 
-  comentario:{
+  comentario: {
     type: String,
-    require:true,
-  }
+    require: true,
+  },
 });
+
+module.exports = mongoose.model("contacto", ContactoSchema);

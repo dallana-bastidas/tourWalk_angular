@@ -16,4 +16,9 @@ export class ApiService {
     postRegistrarUsuario(body:any){
         return this.http.post(`${this.urlApi}/registrar-usuario`, body )
     }
+
+    postContacto(info:any){
+        return this.http.post(`${this.urlApi}/crear_Contacto`, info);
+    }
+
 }
