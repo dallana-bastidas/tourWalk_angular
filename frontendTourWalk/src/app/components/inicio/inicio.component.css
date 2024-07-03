@@ -1,0 +1,36 @@
+/* Inicio sesion*/
+.frase {
+    font-size: 25px;
+    color: #ffffff;
+  }
+
+  .contenedor3 {
+    margin: 60px;
+    border-radius: 60px;
+    background-color: #7396a090;
+
+  }
+
+  .formulario {
+    width: 300px;
+    height: 25px;
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    opacity: 0.6;
+
+  }
+
+  .nombre {
+    padding-left: 35px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .boton {
+    height: 40px;
+    background-color: #071E42;
+    border: none;
+    opacity: 0.8;
+  }
