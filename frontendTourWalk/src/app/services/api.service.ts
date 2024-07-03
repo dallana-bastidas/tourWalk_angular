@@ -12,4 +12,8 @@ export class ApiService {
     postLoginUsuario(usuario: string, clave: string) {
         return this.http.post(`${this.urlApi}/login-usuario`, { email: usuario, password: clave });
     }
+
+    postRegistrarUsuario(body:any){
+        return this.http.post(`${this.urlApi}/registrar-usuario`, body )
+    }
 }
