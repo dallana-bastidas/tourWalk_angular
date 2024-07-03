@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 import { ApiService } from '../../services/api.service';
 
 @Component({
@@ -20,10 +21,20 @@ export class ContactoComponent {
     ) {
         this.fromContacto = this.fb.group({
             nombre: ['', Validators.required],
-            correoElectronico: ['', Validators.required, Validators.pattern(this.regexEmail)],
+            correoElectronico: ['', [Validators.required, Validators.pattern(this.regexEmail)]],
             pais: ['', Validators.required],
             telefono: ['', Validators.required],
             comentario: ['', Validators.required],
+        });
+    }
+
+    solicitarContacto() {
+        this._apiServervicio.postContacto(this.fromContacto.value).subscribe((data: any) => {
+            Swal.fire({
+                title: 'Contacto registrado',
+                icon: 'success',
+            });
+            console.log(data);
         });
     }
 }

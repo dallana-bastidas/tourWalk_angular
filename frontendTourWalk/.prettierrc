@@ -7,7 +7,6 @@
             }
         }
     ],
-
-   "printWidth": 999,
+    "printWidth": 999,
     "htmlWhitespaceSensitivity": "ignore"
 }

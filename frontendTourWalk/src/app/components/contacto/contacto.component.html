@@ -1,5 +1,4 @@
-//cSpell:disable
-<div class="custom-form" id="pepe">
+<div class="custom-form mb-5" id="pepe">
     <section class="fondo contenedor container">
 
         <form [formGroup]="fromContacto" (ngSubmit)="solicitarContacto()">
@@ -14,14 +13,14 @@
 
                     <div class="mb-3 ">
                         <label for="formGroupExampleInput" class="nombre form-label fw-bold mb-0 ">Nombre</label>
-                        <input type="text" class="formulario form-control " id=""
-                            placeholder="Nombre" formControlName="nombre">
+                        <input type="text" class="formulario form-control " id="" placeholder="Nombre"
+                            formControlName="nombre">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="nombre form-label fw-bold mb-0">Correo
                             Electronico</label>
-                        <input type="text" class="formulario form-control" id=""
-                            placeholder="Tu correo electronico" formControlName="correoElectronico">
+                        <input type="text" class="formulario form-control" id="" placeholder="Tu correo electronico"
+                            formControlName="correoElectronico">
                     </div>
 
 
@@ -33,17 +32,18 @@
 
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="nombre form-label fw-bold mb-0">Telefono</label>
-                        <input type="text" class="formulario form-control" id=""
-                            placeholder="3195284474" formControlName="telefono">
+                        <input type="text" class="formulario form-control" id="" placeholder="3195284474"
+                            formControlName="telefono">
                     </div>
 
                     <div class="comentario form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id=""
-                            style="height: 100px" formControlName="comentario"></textarea>
+                        <textarea class="form-control" placeholder="Leave a
+                        comment here" id="txt-mensaje" name="txt-mensaje" style="height: 100px"
+                            formControlName="comentario"></textarea>
                         <label for="floatingTextarea2">Comentario</label>
                     </div>
 
-                    <button class="boton btn btn-secondary me-md-2 m-3 " type="button">Inicio sesion</button>
+                    <button class="boton btn btn-secondary me-md-2 m-3 " type="submit">Inicio sesion</button>
 
                 </div>
             </div>

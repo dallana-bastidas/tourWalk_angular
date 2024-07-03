@@ -9,9 +9,19 @@ exports.crearContacto = async (req, res) => {
     res.status(201).json(contacto);
   } catch (error) {
     res.status(500).json({ mensaje: "Error al crear el contacto", error });
+    console.log(error);
   }
 };
 
+exports.consultarContactos = async (req, res) => {
+  try {
+    const contacto = await contactoModel.find();
+    res.status(201).send(contacto);
+  } catch (error) {
+    console.log(error);
+    res.status(400).send("Hubo un problema al consultar los usuarios");
+  }
+};
 
 // Actualizar un contacto existente
 exports.actualizarContacto = async (req, res) => {
