@@ -43,13 +43,7 @@
   }
 
 
-  .cortina {
-    width: 100%;
-    background: #0000008f;
-    position: absolute;
-    z-index: -1;
-    min-height: 100vh;
-  }
+
 
   .text-start{
     font-family: 'poetsenone';
@@ -60,7 +54,7 @@
   }
 
   .targ-logi{
-    background: #467583d0;
+    background:  #293B56;
     border-radius: 40px;
     height: 30vh;
     transform: translate(80px, 150px);
@@ -85,7 +79,7 @@
     font-family: 'poetsenone';
     font-size: 1.5rem;
     color: #ffffffd0;
-    background: #467583d0;
+    background:  #293B56;
     border-radius: 40px;
     height: 30vh;
     transform: translate(-50px, 150px);
