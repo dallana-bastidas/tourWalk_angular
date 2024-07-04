@@ -2,35 +2,6 @@
   background-color: #293B56;
 }
 
-.mobile-nav-toggle {
-    position: fixed;
-    right: 15px;
-    top: 15px;
-    z-index: 9998;
-    border: 0;
-    font-size: 24px;
-    transition: all 0.4s;
-    outline: none !important;
-    background-color: #149ddd;
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0;
-    border-radius: 50px;
-    cursor: pointer;
-  }
-
-  .mobile-nav-active {
-    overflow: hidden;
-  }
-
-  .mobile-nav-active #header {
-    left: 0;
-  }
-
 .buscar{
     height: 30px;
     padding-left: 40px;
@@ -54,8 +25,6 @@
 .text-start{
   font-family: 'poetsenone';
 }
-
-
 
 .targ-logi{
   background: #467583d0;
@@ -89,4 +58,12 @@
   transform: translate(-50px, 150px);
 }
 
+.social-links{
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
 
+.nav-link{
+    margin-left: 30px;
+}
