@@ -3,10 +3,9 @@
   max-width: 400px;
   background: rgba(255, 255, 255, 0.15);
   margin: auto;
-  margin-bottom: ;
   border-radius: 2.5rem;
   background-color: #ecf0f3;
-  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+  box-shadow: 13px 13px 20px #646161, -13px -13px 20px #646161;
   color: black;
   margin-top: 2rem;
 }
@@ -25,8 +24,6 @@
   background: #ebf5fc;
 }
 
-
-
 .custom-form button {
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -39,7 +36,7 @@
   display: block;
   padding: 0.875rem 1rem;
   border-radius: 1.5rem;
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  box-shadow: 3px 3px 8px #646161, -3px -3px 8px #646161;
   cursor: pointer;
 }
 
