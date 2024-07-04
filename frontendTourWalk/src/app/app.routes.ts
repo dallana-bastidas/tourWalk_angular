@@ -8,6 +8,8 @@ import { PacificoComponent } from './components/destinos/pacifico/pacifico.compo
 import { AmazoniaComponent } from './components/destinos/amazonia/amazonia.component';
 import { AtlanticoComponent } from './components/destinos/atlantico/atlantico.component';
 import { AndinaComponent } from './components/destinos/andina/andina.component';
+import { PlanificaComponent } from './components/planifica/planifica.component';
+import { PacificoslideComponent } from './components/planifica/pacificoslide/pacificoslide.component';
 
 export const routes: Routes = [
     { path: '', component: InicioComponent },
@@ -21,4 +23,7 @@ export const routes: Routes = [
     {path: 'atlantico', component: AtlanticoComponent},
     {path: 'amazonia', component: AmazoniaComponent},
     {path: 'andina', component: AndinaComponent},
+    {path: 'planifica', component: PlanificaComponent},
+    {path: 'pacificoslide', component: PacificoslideComponent},
+
 ];
