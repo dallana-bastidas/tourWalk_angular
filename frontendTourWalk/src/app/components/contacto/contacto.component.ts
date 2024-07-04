@@ -22,8 +22,7 @@ export class ContactoComponent {
         this.fromContacto = this.fb.group({
             nombre: ['', Validators.required],
             correoElectronico: ['', [Validators.required, Validators.pattern(this.regexEmail)]],
-            pais: ['', Validators.required],
-            telefono: ['', Validators.required],
+            asunto: ['', Validators.required],
             comentario: ['', Validators.required],
         });
     }
@@ -31,7 +30,7 @@ export class ContactoComponent {
     solicitarContacto() {
         this._apiServervicio.postContacto(this.fromContacto.value).subscribe((data: any) => {
             Swal.fire({
-                title: 'Contacto registrado',
+                title: 'Mensaje enviado',
                 icon: 'success',
             });
             console.log(data);
