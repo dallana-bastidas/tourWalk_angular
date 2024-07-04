@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../../services/api.service';
 import { CommonModule } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
     selector: 'app-registro',
@@ -37,6 +38,10 @@ export class RegistroComponent {
     registerUsuarioSistema() {
         if (this.formRegistro.valid) {
             this._apiServicio.postRegistrarUsuario(this.formRegistro.value).subscribe(data => {
+                Swal.fire({
+                    title: 'Registro exitoso',
+                    icon: 'success',
+                });
                 console.log(data);
             });
         }
