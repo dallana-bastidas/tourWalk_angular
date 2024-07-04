@@ -22,8 +22,7 @@ export class ContactoComponent {
         this.fromContacto = this.fb.group({
             nombre: ['', Validators.required],
             correoElectronico: ['', [Validators.required, Validators.pattern(this.regexEmail)]],
-            pais: ['', Validators.required],
-            telefono: ['', Validators.required],
+            asunto: ['', Validators.required],
             comentario: ['', Validators.required],
         });
     }

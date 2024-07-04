@@ -1,5 +1,5 @@
 .custom-form {
-  min-width: 500px;
+  min-width: 800px;
   max-width: 400px;
   background: rgba(255, 255, 255, 0.15);
   margin: auto;
@@ -41,4 +41,9 @@
   border-radius: 1.5rem;
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
   cursor: pointer;
+}
+
+.comentario{
+    height: 100px;
+    width: 620px;
 }

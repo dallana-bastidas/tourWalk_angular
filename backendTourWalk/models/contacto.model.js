@@ -12,12 +12,7 @@ const ContactoSchema = mongoose.Schema({
     require: true,
   },
 
-  pais: {
-    type: String,
-    require: true,
-  },
-
-  telefono: {
+  asunto: {
     type: String,
     require: true,
   },
