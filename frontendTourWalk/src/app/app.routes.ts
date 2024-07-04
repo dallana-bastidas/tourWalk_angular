@@ -4,6 +4,7 @@ import { DestinosComponent } from './components/destinos/destinos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { GestionReservaComponent } from './components/admin/gestion-reserva/gestion-reserva.component';
 import { PacificoComponent } from './components/destinos/pacifico/pacifico.component';
 import { AmazoniaComponent } from './components/destinos/amazonia/amazonia.component';
 import { AtlanticoComponent } from './components/destinos/atlantico/atlantico.component';
@@ -12,6 +13,13 @@ import { PlanificaComponent } from './components/planifica/planifica.component';
 import { PacificoslideComponent } from './components/planifica/pacificoslide/pacificoslide.component';
 
 export const routes: Routes = [
+    { path: "", component:InicioComponent},
+    { path: "destinos", component:DestinosComponent},
+    { path: "ingreso", component:LoginComponent},
+    { path: "registro", component: RegistroComponent },
+    { path: "ingreso", component:LoginComponent},
+    { path: "contacto",component:ContactoComponent},
+    { path: "admin/reservas", component:GestionReservaComponent},
     { path: '', component: InicioComponent },
     { path: 'destinos', component: DestinosComponent },
     { path: 'ingreso', component: LoginComponent },

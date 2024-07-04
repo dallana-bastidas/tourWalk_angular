@@ -58,3 +58,13 @@
     </div>
     </div>
 </nav>
+
+@if (esAdministrador) {
+    <nav>
+        <ul>
+            <li class="nav-item">
+                <a routerLink="/admin/usuarios" class="nav-link bot">administracion</a>
+            </li>
+        </ul>
+    </nav>
+}

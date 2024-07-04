@@ -5,10 +5,10 @@ const destinoModel = require("../models/destino.model");
 
 exports.crearReserva = async (req, res) => {
     try {
-        const destinoReserva = await destinoModel.findById(req.body.idDestino);
-        if (!destinoReserva) {
-            return res.status(404).json({ message: 'Destino no encontrado' });
-        }
+        // const destinoReserva = await destinoModel.findById(req.body.idDestino);
+        // if (!destinoReserva) {
+        //     return res.status(404).json({ message: 'Destino no encontrado' });
+        // }
         const reserva = new reservaModel(req.body)
         await reserva.save()
         res.status(201).json({ message: 'Reservacion exitosa', reserva });
@@ -20,17 +20,18 @@ exports.crearReserva = async (req, res) => {
 
 exports.consultarReserva = async (req, res) => {
     try {
-        const idUsuario = req.body.idUsuario;
-        if (!idUsuario) {
-            return res.status(400).json({ message: "Usuario no encontrado" })
-        }
-        let reservaData = await reservaModel.find({
-            idUsuario: req.body.idUsuario,
-        });
+        // const idUsuario = req.body.idUsuario;
+        // if (!idUsuario) {
+        //     return res.status(400).json({ message: "Usuario no encontrado" })
+        // }
+        // let reservaData = await reservaModel.find({
+        //     idUsuario: req.body.idUsuario,
+        // });
+        let reservaData = await reservaModel.find();
         if (!reservaData) {
             res.status(400).json({ message: "no se encontro reserva" })
         } else {
-            res.status(201)
+            res.status(201).send(reservaData)
         }
     } catch (error) {
         console.log(error)
