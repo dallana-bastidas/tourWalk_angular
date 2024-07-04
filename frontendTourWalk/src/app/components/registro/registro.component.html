@@ -4,32 +4,39 @@
             <form [formGroup]="formRegistro" (ngSubmit)="registerUsuarioSistema()" class="custom-form">
                 <div class="d-flex justify-content-center align-items-center p-3 rounded-2">
                     <div class="contenedor3  w-100 d-flex flex-column justify-content-center align-items-center ">
-                        <p class="registro m-auto d-flex justify-content-center pt-3 "> Registrate </p>
+                        <p class="registro m-auto d-flex justify-content-center
+                        pt-3 fw-bold "> Registrate </p>
 
                         <div class="mb-3 w-100">
                             <label for="Nombres" class="nombre form-label fw-bold mb-0 ">Nombres</label>
-                            <input type="text" formControlName="nombre" class="formulario form-control " id="Nombres" placeholder="">
+                            <input type="text" formControlName="nombre" class="formulario form-control " id="Nombres"
+                                placeholder="">
                         </div>
                         <div class="mb-3 w-100">
                             <label for="Apellidos" class="nombre form-label fw-bold mb-0">Apellidos</label>
-                            <input type="text" formControlName="apellido" class="formulario form-control" id="Apellidos" placeholder="">
+                            <input type="text" formControlName="apellido" class="formulario form-control" id="Apellidos"
+                                placeholder="">
                         </div>
 
                         <div class="mb-3 w-100">
                             <label for="Correo" class="nombre form-label fw-bold mb-0 ">Correo Electronico</label>
-                            <input type="text" formControlName="email" class="formulario form-control " id="Correo" placeholder="">
+                            <input type="text" formControlName="email" class="formulario form-control " id="Correo"
+                                placeholder="">
                         </div>
 
                         <div class="mb-3 w-100">
                             <label for="Contraseña" class="nombre form-label fw-bold mb-0">Contraseña</label>
-                            <input type="password" formControlName="password" class="formulario form-control" id="Contraseña" placeholder="">
+                            <input type="password" formControlName="password" class="formulario form-control"
+                                id="Contraseña" placeholder="">
                         </div>
 
                         <div class="mb-3 w-100">
                             <label for="Confirmar" class="nombre form-label fw-bold mb-0">Confirmar Contraseña</label>
-                            <input type="password" formControlName="confirmarPassword" class="formulario form-control" id="Confirmar" placeholder="">
+                            <input type="password" formControlName="confirmarPassword" class="formulario form-control"
+                                id="Confirmar" placeholder="">
                         </div>
-                        <button class="boton btn btn-secondary me-md-2 m-3" type="submit" [disabled]="!formRegistro.valid">Registrarse</button>
+                        <button class="btn-registro boton btn  me-md-2 m-3" type="submit"
+                            [disabled]="!formRegistro.valid">Registrarse</button>
                     </div>
                 </div>
             </form>
