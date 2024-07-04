@@ -30,7 +30,7 @@ export class ContactoComponent {
     solicitarContacto() {
         this._apiServervicio.postContacto(this.fromContacto.value).subscribe((data: any) => {
             Swal.fire({
-                title: 'Contacto registrado',
+                title: 'Mensaje enviado',
                 icon: 'success',
             });
             console.log(data);
