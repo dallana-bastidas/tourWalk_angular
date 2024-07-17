@@ -27,7 +27,8 @@ export class RegistroComponent {
             apellido: ['', Validators.required],
             email: ['', [Validators.required, Validators.pattern(this.regexEmail)]],
             password: ['', [Validators.required, Validators.minLength(6)]],
-            confirmarPassword: ['', Validators.required]
+            confirmarPassword: ['', Validators.required],
+            rol:['',Validators.required]
         });
     }
 

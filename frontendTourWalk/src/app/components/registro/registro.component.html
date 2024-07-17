@@ -19,6 +19,19 @@
                         </div>
 
                         <div class="mb-3 w-100">
+                            <label for="Apellidos" class="nombre form-label fw-bold
+                            mb-0">Tipo de Usuario</label>
+                            <select  formControlName="rol" class="form-select formulario form-control" aria-label="Default select example">
+                                <option selected>Selecciona tu rol</option>
+                                <option value="GUIA">Guia</option>
+                                <option value="TURISTA">Turista </option>
+                            </select>
+                        </div>
+
+
+
+
+                        <div class="mb-3 w-100">
                             <label for="Correo" class="nombre form-label fw-bold mb-0 ">Correo Electronico</label>
                             <input type="text" formControlName="email" class="formulario form-control " id="Correo"
                                 placeholder="">
@@ -35,7 +48,8 @@
                             <input type="password" formControlName="confirmarPassword" class="formulario form-control"
                                 id="Confirmar" placeholder="">
                         </div>
-                        <button class="btn btn-primary me-md-2 m-3" type="submit" [disabled]="!formRegistro.valid">Registrarse</button>
+                        <button class="btn btn-primary me-md-2 m-3" type="submit"
+                            [disabled]="!formRegistro.valid">Registrarse</button>
                     </div>
                 </div>
             </form>
