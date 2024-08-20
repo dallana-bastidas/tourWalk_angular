@@ -13,7 +13,7 @@ router.put('/actualizar-usuario', usuarioController.actualizarUsuario);
 router.delete('/eliminar-usuario', usuarioController.eliminarUsuario);
 
 router.post('/crear-destino', destinoController.crearDestino);
-router.get('/listar-destinos', destinoController.obtenerDestinos);
+router.get('/destinos/zona/:zona', destinoController.obtenerDestinosPorZona);
 router.put('/actualizar-destino/:id', destinoController.actualizarDestino);
 router.delete('/eliminar-destino', destinoController.eliminarDestino);
 
